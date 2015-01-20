@@ -6,10 +6,13 @@ html, body {
   font-size: 100%;
 }
 
+.content {
+  padding-left: 2em;
+}
+
 .sidebar {
   padding: 0;
-  position: fixed;
-  height: 100%;
+  position: relative;
   background-color: $sidebarBgColor;
   color: $sidebarColor;
   font-family: 'Raleway', sans-serif;
@@ -24,5 +27,27 @@ html, body {
   }
   .active {
     background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media screen and (min-width: 783px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 280px;
+  }
+}
+
+@media screen and (min-width: 783px) {
+  .sidebar ul li {
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 783px) {
+  .content {
+    margin-left: 280px;
   }
 }
