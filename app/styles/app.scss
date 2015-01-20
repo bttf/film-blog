@@ -1,0 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif|Open+Sans|Raleway);
+$sidebarColor: #EEE;
+$sidebarBgColor: #333;
+
+html, body {
+  font-size: 100%;
+}
+
+.sidebar {
+  padding: 0;
+  position: fixed;
+  height: 100%;
+  background-color: $sidebarBgColor;
+  color: $sidebarColor;
+  font-family: 'Raleway', sans-serif;
+  a {
+    color: $sidebarColor;
+  }
+  li {
+    padding-left: 1em;
+  }
+  .nav > li > a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}

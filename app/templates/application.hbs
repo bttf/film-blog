@@ -1,3 +1,14 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<div class='row'>
+  <div class='sidebar col-xs-12 col-md-3'>
+    <ul class='nav nav-stacked'>
+      <li>{{#link-to 'index'}}Home{{/link-to}}</li>
+      <li><a href='#'>Films</a></li>
+      <li><a href='#'>Essays</a></li>
+      <li><a href='#'>About</a></li>
+    </ul>
+  </div>
 
-{{outlet}}
+  <div class='col-xs-12 col-md-9'>
+    {{outlet}}
+  </div>
+</div>
