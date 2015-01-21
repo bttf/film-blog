@@ -4,7 +4,7 @@ var attr = DS.attr;
 
 export default DS.Model.extend({
   title: attr('string'),
-  content: attr('string'),
+  body: attr('string'),
   tags: attr(),
   created: attr('date'),
   slug: attr('string'),
