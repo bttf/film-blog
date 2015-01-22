@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Noto+Serif|Open+Sans|Raleway);
 $sidebarColor: #EEE;
 $sidebarBgColor: #333;
+$titleFont: 'Open Sans', sans-serif;
 
 html, body {
   font-size: 100%;
@@ -66,25 +67,33 @@ html, body {
   }
 }
 
+.title {
+  font-size: 3em;
+  font-family: $titleFont;
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+
+.body {
+  font-size: 1.15em;
+  line-height: 1.7em;
+  font-family: 'Noto Serif', serif;
+  p {
+    margin: 0;
+  }
+}
+
 .create {
   padding: 1em 0;
   .title {
-    font-size: 3em;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    margin: 0.5em 0;
+    @extend .title;
   }
   .body-input textarea {
     width: 100%;
     border: 1px #ccc solid;
   }
   .body-preview {
-    font-size: 1.15em;
-    line-height: 1.7em;
-    font-family: 'Noto Serif', serif;
-    p {
-      margin: 0;
-    }
+    @extend .body;
   }
   .button-panel {
     margin: 1em 0;
@@ -124,5 +133,18 @@ html, body {
   }
   li {
     margin: 1em 0;
+  }
+}
+
+.entry {
+  margin: 0 2em;
+  .title {
+    @extend .title;
+  }
+  .body {
+    @extend .body;
+    p {
+      margin: 1em 0;
+    }
   }
 }
