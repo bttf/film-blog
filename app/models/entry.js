@@ -8,7 +8,9 @@ export default DS.Model.extend({
   created: attr('date', {
     defaultValue: function() { return new Date(); }
   }),
-  slug: attr('string'),
   isFilm: attr('boolean', { defaultValue: false }),
-  isEssay: attr('boolean', { defaultValue: false })
+  isEssay: attr('boolean', { defaultValue: false }),
+  slug: function() {
+    return this.get('title').replace(/\s+/g, '-').toLowerCase();
+  }.property('title')
 });

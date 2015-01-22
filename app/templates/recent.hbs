@@ -1,2 +1,7 @@
 <h2>Recent Posts</h2>
+<ul>
+  {{#each entry in controller}}
+    <li>{{#link-to 'entry' entry.slug entry.id}}{{entry.title}}{{/link-to}}</li>
+  {{/each}}
+</ul>
 {{outlet}}

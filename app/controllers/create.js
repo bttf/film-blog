@@ -10,6 +10,7 @@ export default Ember.ObjectController.extend({
         entry.set('error', 'Essay or Film Critique Category must be selected');
         return;
       }
+      entry.set('title', Ember.$('.create .title').text().trim());
       entry.save().then(function(entry) {
         entry.set('error', '');
         entry.set('success', 'Saved: ' + entry.get('created'));
