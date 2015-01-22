@@ -9,6 +9,7 @@ var app = new EmberApp();
 app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 app.import('bower_components/bootstrap/dist/css/bootstrap-theme.css');
 app.import('bower_components/marked/lib/marked.js');
+app.import('bower_components/moment/min/moment.min.js');
 
 // If you need to use different assets in different
 // environments, specify an object as the first parameter. That

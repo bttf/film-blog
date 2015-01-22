@@ -1,7 +1,13 @@
-<h2>Recent Posts</h2>
-<ul>
+<ul class='recent-list'>
   {{#each entry in controller}}
-    <li>{{#link-to 'entry' entry.slug entry.id}}{{entry.title}}{{/link-to}}</li>
+    <li class='entry-title'>
+      {{#link-to 'entry' entry.slug entry.id}}
+        {{entry.title}}
+      {{/link-to}} 
+      <div class='date'>
+        <em>({{short-date entry.created}})</em>
+      </div>
+    </li>
   {{/each}}
 </ul>
 {{outlet}}
