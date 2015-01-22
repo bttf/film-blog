@@ -4,6 +4,7 @@ $sidebarBgColor: #333;
 
 html, body {
   font-size: 100%;
+  font-family: 'Raleway', sans-serif;
 }
 
 .row {
@@ -81,8 +82,28 @@ html, body {
     font-size: 1.15em;
     line-height: 1.7em;
     font-family: 'Noto Serif', serif;
+    p {
+      margin: 0;
+    }
   }
-  .save-btn {
-    float:right;
+  .button-panel {
+    margin: 1em 0;
+    font-size: 0.85em;
+    label {
+      margin: 0 1em;
+    }
+    .wrapper {
+      background-color: rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      padding: 0.5em;
+      border-radius: 10px;
+    }
+    .return-msg {
+      display: inline-block;
+      margin: 0 1em;
+    }
+    .save-btn {
+      margin-left: 1em;
+    }
   }
 }

@@ -9,10 +9,18 @@
     <div class='body-preview'>
       {{markdown-to-html body}}
     </div>
+    <div class='button-panel text-right'>
+      <div {{bind-attr class=':return-msg error:text-danger success:text-success'}}>
+        {{success}} {{error}}
+      </div>
+      <div class='wrapper'>
+        <label>{{input type='checkbox' name='isEssay' checked=isEssay}} Essay</label>
+        <label>{{input type='checkbox' name='isFilm' checked=isFilm}} Film Critique</label>
+        <button class='save-btn btn btn-success' {{action 'saveEntry' this}}>Save</button>
+      </div>
+    </div>
     <div class='body-input'>
       {{textarea value=body placeholder='Body' rows='12'}}
-
-      <button class='save-btn btn btn-success'>Save</button>
     </div>
   </div>
 </div>
