@@ -9,7 +9,7 @@ Router.map(function() {
   this.route("recent", { path: '/' });
   this.route("create");
   this.route("error");
-  this.resource('entry', { path: '/:slug/:id' }, function() {
+  this.resource('entry', { path: '/:slug' }, function() {
     this.route('edit');
   });
 });
