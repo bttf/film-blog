@@ -27,7 +27,11 @@ html, body {
     color: $sidebarColor;
   }
   .nav {
-    margin-top: 4em;
+    margin-top: 0;
+    margin-bottom: 1em;
+    li {
+      margin-top: 0;
+    }
   }
   .nav > li > a:hover {
     background-color: rgba(255, 255, 255, 0.1);
@@ -42,6 +46,12 @@ html, body {
   hr {
     width: 55%;
     margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 783px) {
+  .sidebar .nav {
+    margin-top: 4em;
   }
 }
 
@@ -127,8 +137,8 @@ html, body {
   .date {
     display: inline-block;
     font-family: 'Raleway', sans-serif;
-    font-size: 0.25em;
-    color: #BBB;
+    font-size: 0.32em;
+    color: #AAA;
     /*letter-spacing: 0.1em;*/
   }
   li {
