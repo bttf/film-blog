@@ -11,6 +11,6 @@ export default DS.Model.extend({
   isFilm: attr('boolean', { defaultValue: false }),
   isEssay: attr('boolean', { defaultValue: false }),
   slug: function() {
-    return this.get('title').replace(/\s+/g, '-').toLowerCase();
+    return this.get('title').replace(/(\s+|\.+|,+)/g, '-').toLowerCase();
   }.property('title')
 });
