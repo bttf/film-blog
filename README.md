@@ -1,7 +1,6 @@
 # Film-blog
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Personal blogging app for essays about films and various topics; built wtih Ember.js and Ember-CLI.
 
 ## Prerequisites
 
