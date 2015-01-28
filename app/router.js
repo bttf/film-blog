@@ -12,6 +12,10 @@ Router.map(function() {
     this.route("new");
     this.route("index", { path: "/:slug" });
   });
+  this.route("category", function() {
+    this.route("new");
+    this.route("index", { path: "/:slug" });
+  });
 });
 
 export default Router;

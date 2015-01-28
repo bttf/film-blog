@@ -1,0 +1,16 @@
+<h1>Enter a new Category</h1>
+
+<br>
+
+{{input type='text' value=name placeholder='Category name'}}
+
+<br>
+<br>
+
+<button class='btn btn-primary' {{action 'saveCategory' this}}>Submit</button>
+
+<br>
+
+{{error}}
+
+{{outlet}}

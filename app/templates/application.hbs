@@ -2,11 +2,19 @@
   <div class='sidebar col-xs-12 col-md-3'>
     <ul class='nav nav-stacked'>
       <li>{{#link-to 'recent'}}Home{{/link-to}}</li>
-      <li><a href='#'>Films</a></li>
-      <li><a href='#'>Essays</a></li>
+      {{#each category in model}}
+        {{#unless category.isNew}}
+          <li>
+            {{#link-to 'category' category}}
+              {{category.name}}
+            {{/link-to}}
+          </li>
+        {{/unless}}
+      {{/each}}
       <li><a href='#'>About</a></li>
       <hr>
-      <li>{{#link-to 'article.new'}}+ New{{/link-to}}</li>
+      <li>{{#link-to 'article.new'}}+ New Article{{/link-to}}</li>
+      <li>{{#link-to 'category.new'}}+ New Category{{/link-to}}</li>
     </ul>
   </div>
 
