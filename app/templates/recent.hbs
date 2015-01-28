@@ -1,15 +1,28 @@
 <ul class='recent-list list-unstyled'>
-  {{#each entry in controller}}
-    {{#unless entry.isNew}}
-      <li class='entry-title'>
-        {{#link-to 'entry' entry.slug}}
-          {{entry.title}}
+
+  {{#each article in controller}}
+
+    {{#unless article.isNew}}
+
+      <li class='article-title'>
+
+        {{#link-to 'article.index' article.slug}}
+
+          {{article.title}}
+
         {{/link-to}} 
+
         <div class='date'>
-          <em>({{short-date entry.created}})</em>
+
+          <em>({{short-date article.created}})</em>
+
         </div>
       </li>
+
     {{/unless}}
+
   {{/each}}
+
 </ul>
+
 {{outlet}}

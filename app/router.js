@@ -7,10 +7,10 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route("recent", { path: '/' });
-  this.route("create");
   this.route("error");
-  this.resource('entry', { path: '/:slug' }, function() {
-    this.route('edit');
+  this.resource("article", function() {
+    this.route("new");
+    this.route("index", { path: "/:slug" });
   });
 });
 
