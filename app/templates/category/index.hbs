@@ -1,2 +1,23 @@
 <h1>{{name}}</h1>
-{{outlet}}
+
+{{#link-to 'category.edit' this class='text-primary'}}edit{{/link-to}}
+/
+<a href='' class='text-danger' {{action 'deleteCategory' this}}>delete this category</a> 
+
+<span class='text-danger'>{{error}}</span>
+
+{{!--{{#each article in controller}}
+
+  <li class='article-title'>
+
+    {{#link-to 'article' article}}
+      {{article.title}}
+    {{/link-to}}
+
+    <div class='date'>
+      <em>({{short-date article.created}})</em>
+    </div>
+
+  </li>
+
+  {{/each}}--}}

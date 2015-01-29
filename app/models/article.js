@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 var attr = DS.attr,
-    hasMany = DS.hasMany;
+    belongsTo = DS.belongsTo;
 
 export default DS.Model.extend({
   title: attr('string'),
@@ -9,7 +9,7 @@ export default DS.Model.extend({
   created: attr('date', {
     defaultValue: function() { return new Date(); }
   }),
-  categories: hasMany('category'),
+  category: belongsTo('category'),
   slug: function() {
     if (this.get('title')) {
       return this.get('title').trim().replace(/\W/g, '-').replace(/-+$/g, '').toLowerCase();
