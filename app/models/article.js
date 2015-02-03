@@ -10,6 +10,7 @@ export default DS.Model.extend({
     defaultValue: function() { return new Date(); }
   }),
   category: belongsTo('category'),
+
   slug: function() {
     if (this.get('title')) {
       return this.get('title').trim().replace(/\W/g, '-').replace(/-+$/g, '').toLowerCase();

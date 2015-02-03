@@ -11,11 +11,12 @@ Router.map(function() {
   this.resource("article", function() {
     this.route("new");
     this.route("index", { path: "/:slug" });
+    this.route("edit", { path: "/:slug/edit" });
   });
   this.route("category", function() {
     this.route("new");
     this.route("index", { path: "/:slug" });
-    this.route("edit", { path: "/edit/:slug" });
+    this.route("edit", { path: "/:slug/edit" });
   });
 });
 

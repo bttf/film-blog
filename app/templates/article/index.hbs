@@ -2,8 +2,16 @@
   <div class='title'>
     {{title}}
   </div>
+  {{#link-to 'article.edit' this class='text-primary'}}edit{{/link-to}}
+  /
+  <a href='' class='text-danger' {{action 'deleteArticle' this}}>delete this article</a> 
+
+  <span class='text-danger'>{{error}}</span>
+
   <div class='body'>
     {{markdown-to-html body}}
   </div>
+
 </div>
+
 {{outlet}}
